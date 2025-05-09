@@ -19,16 +19,16 @@ st.set_page_config(page_title="Stock Forecasting", layout="wide")
 st.title("📈 Stock Price Forecasting")
 
 # Load data
-csv_path = 'C:/Users/LENOVO/Downloads/Additional RND/Forcasting_Models/complete_datetime.csv'
-data = pd.read_csv(csv_path)
+# csv_path = 'C:/Users/LENOVO/Downloads/Additional RND/Forcasting_Models/complete_datetime.csv'
+# data = pd.read_csv(csv_path)
 
 # -----------------------------
 # If you want to use file upload instead, uncomment below:
-# uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
-# if uploaded_file is not None:
-#     data = pd.read_csv(uploaded_file)
-# else:
-#     st.stop()
+uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
+if uploaded_file is not None:
+    data = pd.read_csv(uploaded_file)
+else:
+    st.stop()
 # -----------------------------
 
 # Check Open column
